@@ -1,0 +1,25 @@
+<app-header></app-header>
+<main class="game-container">
+  @if(winner === 0) {
+  <h2>
+    Joueur en cours :
+    {{ currentPlayer === 1 ? "Joueur 1 (rouge)" : "Joueur 2 (jaune)" }}
+  </h2>
+  } @else {
+  <h2>Le joueur {{ winner }} a gagné !</h2>
+  }
+
+  <div class="grid">
+    @for(row of grid; let rowIndex = $index; track rowIndex) { @for(cell of row;
+    let colIndex = $index; track colIndex) {
+    <div
+      class="cell"
+      [class.player1]="cell === 1"
+      [class.player2]="cell === 2"
+      (click)="makeMove(colIndex)"
+    ></div>
+    } }
+  </div>
+
+  <button (click)="initOrResetGame()">Recommencer</button>
+</main>

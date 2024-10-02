@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  padding: 1.5rem 2rem;
+  background-color: #212121;
+  flex-direction: row;
+  align-items: center;
+
+  gap: 1rem;
+
+  h1 {
+    color: white;
+  }
+
+  .thermo-logo {
+    width: 4rem;
+    height: 4rem;
+    object-fit: cover;
+    border-radius: 0.25rem;
+  }
+
+  .puissance4-logo {
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+  }
+}
